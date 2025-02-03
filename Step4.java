@@ -1,5 +1,5 @@
-public class Step3 {
-    // Removing The Elements From the Last or From the Begining of The LnkedList
+public class Step4 {
+    //Here we are Using The Recursive Approach to FIND THE Element in Linked List;
     public static class Node{
         // These are the Certain Materials of Node;
         int Data;
@@ -71,9 +71,34 @@ public class Step3 {
         Head=Head.Next;
         return val;
      }
+     // Recursive Approach to Find THe Element 
+     public int Helper(Node Head,int key){
+
+        if(Head==null){
+            return -1;
+
+        }
+        if(Head.Data==key){
+            return 0;
+
+        }
+        int index=Helper(Head.Next, key);
+        if(index==-1){
+            return -1;
+        }
+        else{
+            return index+1;
+        }
+     }
+
+     public int Recursive(int key){
+        return Helper(Head,key);
+     }
+    
+
     public static void main(String []args){
      
-       Step3 List=new Step3();
+       Step4 List=new Step4();
        List.Print();
        List.AddFirst(2);
        List.Print();
@@ -85,6 +110,7 @@ public class Step3 {
        List.Print();
        List.RemoveFirst();
        List.Print();;
+      System.out.println(List.Recursive(4)) ;
       
      
       
