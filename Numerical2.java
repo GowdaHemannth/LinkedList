@@ -1,7 +1,5 @@
-public class Numerical1 {
-    //Here We are Going To Remove the Node From Back Side OF LinkedList;
-    // Here WE are using like First (Size-n+1) These is the Second Method
-    
+public class Numerical2 {
+   // Here We are Going Check Whether The Given Linked List Palindrome OR not
     public static class Node{
         // These are the Certain Materials of Node;
         int Data;
@@ -115,10 +113,52 @@ public class Numerical1 {
         }
         Prev.Next=Prev.Next.Next;
      }
+    
+     // Method For Palindrome
+     public Node FindMid(Node Head){
+        Node Slow=Head;
+        Node Fast=Head;
+        while(Fast!=null&&Fast.Next!=null){
+            Slow=Slow.Next;// It Goes ONly One Step At A time
+            Fast=Fast.Next.Next; // But Here IT Goes 2 Steps
+        }
+        return Slow;
+    }
 
+    public boolean CheckPalindrome(){
+        if(Head==null||Head.Next==null){
+            return true;
+        }
+        // Finding the Middle;
+        Node MidNode=FindMid(Head);
+        Node Prev=null;
+        Node Curr=MidNode;
+        Node Next;
+        while(Curr!=null){
+            Next=Curr.Next;
+            Curr.Next=Prev;
+            Prev=Curr;
+            Curr=Next;
+
+        }
+        Node Right=Prev;
+        Node Left=Head;
+        while(Right!=null){
+            if(Left.Data!=Right.Data){
+                return false;
+            }
+            else{
+                Left=Left.Next;
+                Right=Right.Next;
+
+            }
+
+        }
+        return true;
+    }
     public static void main(String []args){
      
-       Numerical1 List=new Numerical1();
+       Numerical2 List=new Numerical2();
       
        List.AddFirst(2);
       
@@ -128,11 +168,10 @@ public class Numerical1 {
     
        List.AddLast(4);
        List.Print();
-     
+    System.out.println(List.CheckPalindrome());   
       
    
-      List.Reverese(2);
-      List.Print();
+      
       
      
       
