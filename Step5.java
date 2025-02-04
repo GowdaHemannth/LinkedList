@@ -96,7 +96,7 @@ public class Step5 {
      }
     
      // Method to Reverse a Linked List 
-     public void Reverese(){
+     public void Reverese(int n){
         Node Prev=null;
         Node Curr=Tail=Head;
         Node Next;
@@ -108,6 +108,10 @@ public class Step5 {
 
         }
         Head=Prev;
+        for (int i=0;i<n-1;i++){
+            Prev=Prev.Next;
+        }
+        Prev.Next=Prev.Next.Next;
      }
 
     public static void main(String []args){
@@ -125,7 +129,7 @@ public class Step5 {
      
       
    
-      List.Reverese();
+      List.Reverese(2);
       List.Print();
       
      
