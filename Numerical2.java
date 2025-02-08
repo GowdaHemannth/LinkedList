@@ -1,3 +1,5 @@
+
+
 public class Numerical2 {
    // Here We are Going Check Whether The Given Linked List Palindrome OR not
     public static class Node{
@@ -168,7 +170,9 @@ public class Numerical2 {
     
        List.AddLast(4);
        List.Print();
-    System.out.println(List.CheckPalindrome());   
+    System.out.println(List.CheckPalindrome()); 
+   
+   
       
    
       
