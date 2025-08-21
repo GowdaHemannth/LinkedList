@@ -1,4 +1,6 @@
 public class Step1 {
+      // Linked 
+
     // Adding The Node in the Begining of linked List;
     public static class Node{
         // These are the Certain Materials of Node;
