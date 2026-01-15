@@ -1,6 +1,6 @@
-public class Step1 {
-      // Linked 
+package BasicOperations;
 
+public class PrintLinkedList {
     // Adding The Node in the Begining of linked List;
     public static class Node{
         // These are the Certain Materials of Node;
@@ -41,13 +41,32 @@ public class Step1 {
         Tail.Next=NewNode;
         Tail=NewNode;
      }
+     // Method To print The Linked list;
+     public void Print(){
+        if(Head==null){
+            System.out.println("The Linked List is Empty");
+            return;
+        }
+        Node Temp=Head;
+        while(Temp!=null){
+            System.out.print(Temp.Data+" -->");
+            Temp=Temp.Next;
+        }
+        System.out.println("null");
+     }
     public static void main(String []args){
      
-       Step1 List=new Step1();
+       PrintLinkedList List=new    PrintLinkedList();
+       List.Print();
        List.AddFirst(2);
+       List.Print();
        List.AddFirst(1);
+       List.Print();
        List.AddLast(3);
+       List.Print();
        List.AddLast(4);
+       List.Print();
+      
      
       
    

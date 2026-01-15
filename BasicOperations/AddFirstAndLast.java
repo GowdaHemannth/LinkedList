@@ -1,5 +1,7 @@
+package BasicOperations;
+public class AddFirstAndLast {
+      // Linked 
 
-public class Step2 {
     // Adding The Node in the Begining of linked List;
     public static class Node{
         // These are the Certain Materials of Node;
@@ -40,32 +42,13 @@ public class Step2 {
         Tail.Next=NewNode;
         Tail=NewNode;
      }
-     // Method To print The Linked list;
-     public void Print(){
-        if(Head==null){
-            System.out.println("The Linked List is Empty");
-            return;
-        }
-        Node Temp=Head;
-        while(Temp!=null){
-            System.out.print(Temp.Data+" -->");
-            Temp=Temp.Next;
-        }
-        System.out.println("null");
-     }
     public static void main(String []args){
      
-       Step2 List=new Step2();
-       List.Print();
+       AddFirstAndLast List=new AddFirstAndLast();
        List.AddFirst(2);
-       List.Print();
        List.AddFirst(1);
-       List.Print();
        List.AddLast(3);
-       List.Print();
        List.AddLast(4);
-       List.Print();
-      
      
       
    

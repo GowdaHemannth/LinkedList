@@ -1,5 +1,7 @@
-public class Step5 {
-    //Here We are Going To Reverse A Linked List;
+public class OperationsIMP {
+    //Here We are Going To Remove the Node From Back Side OF LinkedList;
+    // Here WE are using like First (Size-n+1) These is the Second Method
+    
     public static class Node{
         // These are the Certain Materials of Node;
         int Data;
@@ -95,6 +97,8 @@ public class Step5 {
         return Helper(Head,key);
      }
     
+
+     // Reversing the Linked List
      // Method to Reverse a Linked List 
      public void Reverese(int n){
         Node Prev=null;
@@ -108,15 +112,12 @@ public class Step5 {
 
         }
         Head=Prev;
-        for (int i=0;i<n-1;i++){
-            Prev=Prev.Next;
-        }
-        Prev.Next=Prev.Next.Next;
+       
      }
 
     public static void main(String []args){
      
-       Step5 List=new Step5();
+       OperationsIMP List=new OperationsIMP();
       
        List.AddFirst(2);
       

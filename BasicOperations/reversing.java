@@ -1,5 +1,6 @@
-public class Step4 {
-    //Here we are Using The Recursive Approach to FIND THE Element in Linked List;
+package BasicOperations;
+public class reversing {
+    //Here We are Going To Reverse A Linked List;
     public static class Node{
         // These are the Certain Materials of Node;
         int Data;
@@ -95,22 +96,42 @@ public class Step4 {
         return Helper(Head,key);
      }
     
+     // Method to Reverse a Linked List 
+     public void Reverese(int n){
+        Node Prev=null;
+        Node Curr=Tail=Head;
+        Node Next;
+        while(Curr!=null){
+            Next=Curr.Next;
+            Curr.Next=Prev;
+            Prev=Curr;
+            Curr=Next;
+
+        }
+        Head=Prev;
+        for (int i=0;i<n-1;i++){
+            Prev=Prev.Next;
+        }
+        Prev.Next=Prev.Next.Next;
+     }
 
     public static void main(String []args){
      
-       Step4 List=new Step4();
-       List.Print();
+       reversing List=new reversing();
+      
        List.AddFirst(2);
-       List.Print();
+      
        List.AddFirst(1);
-       List.Print();
+     
        List.AddLast(3);
-       List.Print();
+    
        List.AddLast(4);
        List.Print();
-       List.RemoveFirst();
-       List.Print();;
-      System.out.println(List.Recursive(4)) ;
+     
+      
+   
+      List.Reverese(2);
+      List.Print();
       
      
       

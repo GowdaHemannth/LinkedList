@@ -1,7 +1,6 @@
-public class Numerical1 {
-    //Here We are Going To Remove the Node From Back Side OF LinkedList;
-    // Here WE are using like First (Size-n+1) These is the Second Method
-    
+package BasicOperations;
+public class RemoveFirst {
+    // Removing The Elements From the Last or From the Begining of The LnkedList
     public static class Node{
         // These are the Certain Materials of Node;
         int Data;
@@ -73,66 +72,20 @@ public class Numerical1 {
         Head=Head.Next;
         return val;
      }
-     // Recursive Approach to Find THe Element 
-     public int Helper(Node Head,int key){
-
-        if(Head==null){
-            return -1;
-
-        }
-        if(Head.Data==key){
-            return 0;
-
-        }
-        int index=Helper(Head.Next, key);
-        if(index==-1){
-            return -1;
-        }
-        else{
-            return index+1;
-        }
-     }
-
-     public int Recursive(int key){
-        return Helper(Head,key);
-     }
-    
-     // Method to Reverse a Linked List 
-     public void Reverese(int n){
-        Node Prev=null;
-        Node Curr=Tail=Head;
-        Node Next;
-        while(Curr!=null){
-            Next=Curr.Next;
-            Curr.Next=Prev;
-            Prev=Curr;
-            Curr=Next;
-
-        }
-        Head=Prev;
-        for (int i=0;i<n-1;i++){
-            Prev=Prev.Next;
-        }
-        Prev.Next=Prev.Next.Next;
-     }
-
     public static void main(String []args){
      
-       Numerical1 List=new Numerical1();
-      
+       RemoveFirst List=new RemoveFirst();
+       List.Print();
        List.AddFirst(2);
-      
+       List.Print();
        List.AddFirst(1);
-     
+       List.Print();
        List.AddLast(3);
-    
+       List.Print();
        List.AddLast(4);
        List.Print();
-     
-      
-   
-      List.Reverese(2);
-      List.Print();
+       List.RemoveFirst();
+       List.Print();;
       
      
       
